@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/carStyle.css" />
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
+	<script src="script.js" ></script>
+	<meta charset="utf-8" />
+
+
+</head>
+<body >
+
+    <div id = "wrapper">
+		<header></header>
+		<div id = "navigation">
+			<table id = "navTable">
+				<tr>
+					<td> <a href="#/bugatti" ><div class="hvr-shutter-in-horizontal">בוגאטי</div> </a> </td>
+					<td><a href="#/Koenigsegg"> <div class="hvr-shutter-in-horizontal">קוניגסג</div> </a></td>
+					<td> <a href="#/mc"> <div class="hvr-shutter-in-horizontal">מקלרן פי-1</div> </a> </td>
+					<td> <a href="#/fer"> <div class="hvr-shutter-in-horizontal">לה-פרארי</div> </a> </td>
+				</tr>
+			</table>
+            
+        </div>
+		<div id = "info">
+            <div class="{{ pageClass }}" ng-view>
+                    <!--this is the injection itself!-->
+            </div>
+        </div>
+		
+    <footer> 
+        נוצר על ידי ניר בן עמרם, תרגיל הגשה אישי מספר שניים, הנדסת תוכנה 2016
+    </footer>	
+
+    </div>
+
+</body>
+</html>
