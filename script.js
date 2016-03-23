@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute', 'ngAnimate']);
+var app = angular.module('myApp', ['ngRoute']);
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -8,18 +8,15 @@ app.config(function($routeProvider) {
         })    
         .when('/bugatti', {
             templateUrl : "bugatti.html",
-           controller: 'aboutController'
 
         })
 
         .when('/Koenigsegg', {
             templateUrl : "Koenigsegg.html",
-            controller: 'contactController'
         })
 
         .when('/mc', {
             templateUrl : 'mc.html',
-             controller: 'mainController'
         })
 
         .when('/fer', {
@@ -29,16 +26,4 @@ app.config(function($routeProvider) {
         .otherwise({redirectTo: 'bugatti.html'});
 });
 
-app.controller('mainController', function($scope) {
-    alert("got here");
-    $scope.pageClass = 'page-home';
-});
-
-app.controller('aboutController', function($scope) {
-    $scope.pageClass = 'page-about';
-});
-
-app.controller('contactController', function($scope) {
-    $scope.pageClass = 'page-contact';
-});
 
